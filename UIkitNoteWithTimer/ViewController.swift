@@ -11,6 +11,7 @@ import PencilKit
 class ViewController: UIViewController{
 
 
+    @IBOutlet weak var canvasView: PKCanvasView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +23,12 @@ class ViewController: UIViewController{
         canvas.drawingPolicy = .anyInput
         canvas.tool = PKInkingTool(.pen, color: .black, width: 30)
     }
+}
+
+extension ViewController: PKCanvasViewDelegate {
+
+}
+
+extension ViewController: PKToolPickerObserver {
+
 }

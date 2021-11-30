@@ -15,9 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-nN-oFB">
+                                <rect key="frame" x="0.0" y="24" width="834" height="1150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8g-nN-oFB" secondAttribute="trailing" id="4LR-7e-RSD"/>
+                            <constraint firstItem="a8g-nN-oFB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K0Q-hB-LSC"/>
+                            <constraint firstItem="a8g-nN-oFB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xq9-jZ-aM1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a8g-nN-oFB" secondAttribute="bottom" id="ZF7-ep-PSb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canvasView" destination="a8g-nN-oFB" id="6d9-Lb-cFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
