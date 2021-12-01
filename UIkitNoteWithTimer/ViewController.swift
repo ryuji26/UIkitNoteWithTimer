@@ -15,9 +15,7 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
-        // Three Lines of Code ここに3行のコードを足す
         let canvas = PKCanvasView(frame: view.frame)
         view.addSubview(canvas)
         canvas.drawingPolicy = .anyInput

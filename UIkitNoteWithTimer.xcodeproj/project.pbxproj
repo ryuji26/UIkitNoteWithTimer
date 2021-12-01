@@ -13,6 +13,7 @@
 		46B0A809275379E300D42786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A807275379E300D42786 /* Main.storyboard */; };
 		46B0A80B275379E500D42786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A80A275379E500D42786 /* Assets.xcassets */; };
 		46B0A80E275379E500D42786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A80C275379E500D42786 /* LaunchScreen.storyboard */; };
+		46B0A8162757B9D100D42786 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A8152757B9D100D42786 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		46B0A80A275379E500D42786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46B0A80D275379E500D42786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46B0A80F275379E500D42786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46B0A8152757B9D100D42786 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				46B0A801275379E300D42786 /* AppDelegate.swift */,
 				46B0A803275379E300D42786 /* SceneDelegate.swift */,
 				46B0A805275379E300D42786 /* ViewController.swift */,
+				46B0A8152757B9D100D42786 /* DataModel.swift */,
 				46B0A807275379E300D42786 /* Main.storyboard */,
 				46B0A80A275379E500D42786 /* Assets.xcassets */,
 				46B0A80C275379E500D42786 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B0A806275379E300D42786 /* ViewController.swift in Sources */,
+				46B0A8162757B9D100D42786 /* DataModel.swift in Sources */,
 				46B0A802275379E300D42786 /* AppDelegate.swift in Sources */,
 				46B0A804275379E300D42786 /* SceneDelegate.swift in Sources */,
 			);
