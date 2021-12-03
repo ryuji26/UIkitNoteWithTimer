@@ -4,82 +4,87 @@
 //
 //  Created by 髙橋　竜治 on 2021/12/01.
 //
+/*
+ アプリのデータモデルを支えるのは、クロスプラットフォームの'PKDrawing'オブジェクトです。
+ PKDrawingは、SwiftではCodableに準拠しています。→Codableとは、インスタンス（オブジェクト）情報を他の形式にデータ変換するプロトコル。
+ Codableに準拠していますが、dataRepresentation()メソッドを使って、Dataオブジェクトとしてそのデータ表現を取得することもできます。
+ */
+
 
 import UIKit
 import PencilKit
 import os
 
-/// `DataModel` contains the drawings that make up the data model, including multiple image drawings and a signature drawing.
+/// データモデル構造体
 struct DataModel: Codable {
 
-    /// Names of the drawing assets to be used to initialize the data model the first time.
+    /// 描画ページのデフォルト名
     static let defaultDrawingNames: [String] = ["Notes"]
 
-    /// The width used for drawing canvases.
+    /// canvasの幅
     static let canvasWidth: CGFloat = 768
 
-    /// The drawings that make up the current data model.
+    ///     var signature = PKDrawing() を削除
     var drawings: [PKDrawing] = []
-    var signature = PKDrawing()
 }
 
-/// `DataModelControllerObserver` is the behavior of an observer of data model changes.
+/// データモデルの変更を監視するオブザーバー
 protocol DataModelControllerObserver {
-    /// Invoked when the data model changes.
+    /// データモデル変更時に呼び出されるメソッド
     func dataModelChanged()
 }
 
-/// `DataModelController` coordinates changes to the data  model.
+/// データモデルへの変更を調整
 class DataModelController {
 
-    /// The underlying data model.
+    /// 基礎となるデータモデル
     var dataModel = DataModel()
 
-    /// Thumbnail images representing the drawings in the data model.
+    /// サムネイル関係
     var thumbnails = [UIImage]()
     var thumbnailTraitCollection = UITraitCollection() {
         didSet {
-            // If the user interface style changed, regenerate all thumbnails.
+            // ユーザーインターフェースが変更されたらサムネイルを再生成
             if oldValue.userInterfaceStyle != thumbnailTraitCollection.userInterfaceStyle {
                 generateAllThumbnails()
             }
         }
     }
 
-    /// Dispatch queues for the background operations done by this controller.
+    /// バックグラウンド操作のためのディスパッチキュー
     private let thumbnailQueue = DispatchQueue(label: "ThumbnailQueue", qos: .background)
     private let serializationQueue = DispatchQueue(label: "SerializationQueue", qos: .background)
 
-    /// Observers add themselves to this array to start being informed of data model changes.
+    /// 配列に自身を追加することで、変更の通知を開始する
     var observers = [DataModelControllerObserver]()
 
-    /// The size to use for thumbnail images.
+    /// サムネイルのサイズ
     static let thumbnailSize = CGSize(width: 192, height: 256)
 
-    /// Computed property providing access to the drawings in the data model.
+    /// データモデルのdrawingsにアクセスするためのプロパティ
     var drawings: [PKDrawing] {
         get { dataModel.drawings }
         set { dataModel.drawings = newValue }
     }
-    /// Computed property providing access to the signature in the data model.
-    var signature: PKDrawing {
-        get { dataModel.signature }
-        set { dataModel.signature = newValue }
-    }
+    /// signatureはいらないのでコメントアウト
+//    var signature: PKDrawing {
+//        get { dataModel.signature }
+//        set { dataModel.signature = newValue }
+//    }
 
-    /// Initialize a new data model.
+    /// 新しいデータモデルの初期化
     init() {
         loadDataModel()
     }
 
-    /// Update a drawing at `index` and generate a new thumbnail.
+    /// 新しいサムネイルを生成
     func updateDrawing(_ drawing: PKDrawing, at index: Int) {
         dataModel.drawings[index] = drawing
         generateThumbnail(index)
         saveDataModel()
     }
 
-    /// Helper method to cause regeneration of all thumbnails.
+    /// 全てのサムネイルの生成を行う
     private func generateAllThumbnails() {
         for index in drawings.indices {
             generateThumbnail(index)
@@ -118,14 +123,14 @@ class DataModelController {
         }
     }
 
-    /// The URL of the file in which the current data model is saved.
+    /// ファイルのURL
     private var saveURL: URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths.first!
         return documentsDirectory.appendingPathComponent("PencilKitDraw.data")
     }
 
-    /// Save the data model to persistent storage.
+    /// ファイルをストレージに保存
     func saveDataModel() {
         let savingDataModel = dataModel
         let url = saveURL
@@ -140,7 +145,7 @@ class DataModelController {
         }
     }
 
-    /// Load the data model from persistent storage
+    /// ストレージからデータを読み込む
     private func loadDataModel() {
         let url = saveURL
         serializationQueue.async {
@@ -166,7 +171,7 @@ class DataModelController {
         }
     }
 
-    /// Construct an initial data model when no data model already exists.
+    /// データモデルがない場合、初期化して構築
     private func loadDefaultDrawings() -> DataModel {
         var testDataModel = DataModel()
         for sampleDataName in DataModel.defaultDrawingNames {
@@ -185,7 +190,7 @@ class DataModelController {
         generateAllThumbnails()
     }
 
-    /// Create a new drawing in the data model.
+    /// 新規データ作成
     func newDrawing() {
         let newDrawing = PKDrawing()
         dataModel.drawings.append(newDrawing)
