@@ -42,8 +42,15 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="232" height="291"/>
+                                <connections>
+                                    <outlet property="imageView" destination="aCZ-RA-nJk" id="ZqF-kB-1Bq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="k9c-lw-dyT"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="sla-nO-5pt"/>
+                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="LeB-yM-xEW">
                         <barButtonItem key="rightBarButtonItem" title="add" image="plus" catalog="system" id="7gc-w8-rVl">
@@ -52,15 +59,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="JUu-Tg-pE7" kind="show" identifier="toCanvasView" id="a2j-F8-GLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875.5395683453238" y="118.5929648241206"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pencil Kit Draw Navigation Controller-->
         <scene sceneID="jX0-cJ-zi7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cPe-PH-zhG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cPe-PH-zhG" customClass="PencilKitDrawNavigationController" customModule="UIkitNoteWithTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzB-Sa-6HZ">
                         <rect key="frame" x="0.0" y="24" width="834" height="50"/>
@@ -74,6 +84,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnz-0i-euG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.58273381294966" y="118.5929648241206"/>
+        </scene>
+        <!--CanvasViewController-->
+        <scene sceneID="PJT-al-3cT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CanvasViewController" id="JUu-Tg-pE7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Pul-lR-IBp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1i-gd-xCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="119"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Canvas View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CanvasViewController" customModule="UIkitNoteWithTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hub-mk-itD" appends="YES" id="BqE-Jo-naU"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fmG-nu-GIo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AML-EU-Q2w">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="Y6W-OH-hqX" id="Gh5-Hc-HcT"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" systemItem="save" id="T2S-ui-fg4">
+                                <connections>
+                                    <action selector="saveAction:" destination="Y6W-OH-hqX" id="s9s-Kc-Pqb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="biB-wY-FjX">
+                                <connections>
+                                    <action selector="shareAction:" destination="Y6W-OH-hqX" id="Hme-64-8t7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="hand.draw" catalog="system" id="JYT-Fg-ota">
+                                <connections>
+                                    <action selector="fingerDrawingAction:" destination="Y6W-OH-hqX" id="1up-gN-PSw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Autosave: On" id="zX2-yI-69T">
+                                <connections>
+                                    <action selector="autosaveChangeAction:" destination="Y6W-OH-hqX" id="86T-9I-YFC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="autosaveButton" destination="zX2-yI-69T" id="7GO-mt-uHJ"/>
+                        <outlet property="saveButton" destination="T2S-ui-fg4" id="U5m-VF-pCt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hub-mk-itD">
+                    <connections>
+                        <action selector="tapAction:" destination="Y6W-OH-hqX" id="kac-ML-qCk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="849.64028776978421" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.draw" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

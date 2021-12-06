@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46531607275CA19900CCBC2A /* Autosave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46531606275CA19900CCBC2A /* Autosave.swift */; };
+		46531609275CA1C200CCBC2A /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46531608275CA1C200CCBC2A /* CanvasViewController.swift */; };
+		4653160B275CA1FE00CCBC2A /* EventNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653160A275CA1FE00CCBC2A /* EventNames.swift */; };
+		4653160D275CA21F00CCBC2A /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653160C275CA21F00CCBC2A /* Document.swift */; };
+		4653160F275CA25700CCBC2A /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653160E275CA25700CCBC2A /* DocumentManager.swift */; };
+		46531611275CA27400CCBC2A /* ThumbnailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46531610275CA27400CCBC2A /* ThumbnailCollectionViewController.swift */; };
+		46531613275CA2A400CCBC2A /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46531612275CA2A400CCBC2A /* ThumbnailCollectionViewCell.swift */; };
+		46531615275CA30C00CCBC2A /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46531614275CA30C00CCBC2A /* CanvasViewController.storyboard */; };
 		46B0A802275379E300D42786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A801275379E300D42786 /* AppDelegate.swift */; };
 		46B0A809275379E300D42786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A807275379E300D42786 /* Main.storyboard */; };
 		46B0A80B275379E500D42786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A80A275379E500D42786 /* Assets.xcassets */; };
 		46B0A80E275379E500D42786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B0A80C275379E500D42786 /* LaunchScreen.storyboard */; };
 		46B0A8162757B9D100D42786 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A8152757B9D100D42786 /* DataModel.swift */; };
-		46B0A8182759FF9100D42786 /* PencilKitDrawNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A8172759FF9100D42786 /* PencilKitDrawNavigationController.swift */; };
-		46B0A81A275A004D00D42786 /* ThumbnailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A819275A004D00D42786 /* ThumbnailCollectionViewController.swift */; };
-		46B0A81C275A015100D42786 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A81B275A015100D42786 /* ThumbnailCollectionViewCell.swift */; };
-		46B0A81E275A018300D42786 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0A81D275A018300D42786 /* DrawingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46531606275CA19900CCBC2A /* Autosave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autosave.swift; sourceTree = "<group>"; };
+		46531608275CA1C200CCBC2A /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		4653160A275CA1FE00CCBC2A /* EventNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNames.swift; sourceTree = "<group>"; };
+		4653160C275CA21F00CCBC2A /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		4653160E275CA25700CCBC2A /* DocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentManager.swift; sourceTree = "<group>"; };
+		46531610275CA27400CCBC2A /* ThumbnailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewController.swift; sourceTree = "<group>"; };
+		46531612275CA2A400CCBC2A /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		46531614275CA30C00CCBC2A /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
 		46B0A7FE275379E300D42786 /* UIkitNoteWithTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIkitNoteWithTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B0A801275379E300D42786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B0A808275379E300D42786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,10 +38,6 @@
 		46B0A80D275379E500D42786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46B0A80F275379E500D42786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B0A8152757B9D100D42786 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		46B0A8172759FF9100D42786 /* PencilKitDrawNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitDrawNavigationController.swift; sourceTree = "<group>"; };
-		46B0A819275A004D00D42786 /* ThumbnailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewController.swift; sourceTree = "<group>"; };
-		46B0A81B275A015100D42786 /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
-		46B0A81D275A018300D42786 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +71,16 @@
 			isa = PBXGroup;
 			children = (
 				46B0A801275379E300D42786 /* AppDelegate.swift */,
+				46531606275CA19900CCBC2A /* Autosave.swift */,
+				46531608275CA1C200CCBC2A /* CanvasViewController.swift */,
 				46B0A8152757B9D100D42786 /* DataModel.swift */,
-				46B0A8172759FF9100D42786 /* PencilKitDrawNavigationController.swift */,
-				46B0A819275A004D00D42786 /* ThumbnailCollectionViewController.swift */,
-				46B0A81B275A015100D42786 /* ThumbnailCollectionViewCell.swift */,
-				46B0A81D275A018300D42786 /* DrawingViewController.swift */,
+				4653160A275CA1FE00CCBC2A /* EventNames.swift */,
+				4653160C275CA21F00CCBC2A /* Document.swift */,
+				4653160E275CA25700CCBC2A /* DocumentManager.swift */,
+				46531610275CA27400CCBC2A /* ThumbnailCollectionViewController.swift */,
+				46531612275CA2A400CCBC2A /* ThumbnailCollectionViewCell.swift */,
 				46B0A807275379E300D42786 /* Main.storyboard */,
+				46531614275CA30C00CCBC2A /* CanvasViewController.storyboard */,
 				46B0A80A275379E500D42786 /* Assets.xcassets */,
 				46B0A80C275379E500D42786 /* LaunchScreen.storyboard */,
 				46B0A80F275379E500D42786 /* Info.plist */,
@@ -135,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B0A80E275379E500D42786 /* LaunchScreen.storyboard in Resources */,
+				46531615275CA30C00CCBC2A /* CanvasViewController.storyboard in Resources */,
 				46B0A80B275379E500D42786 /* Assets.xcassets in Resources */,
 				46B0A809275379E300D42786 /* Main.storyboard in Resources */,
 			);
@@ -147,12 +160,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46531609275CA1C200CCBC2A /* CanvasViewController.swift in Sources */,
+				46531611275CA27400CCBC2A /* ThumbnailCollectionViewController.swift in Sources */,
+				46531613275CA2A400CCBC2A /* ThumbnailCollectionViewCell.swift in Sources */,
+				46531607275CA19900CCBC2A /* Autosave.swift in Sources */,
+				4653160D275CA21F00CCBC2A /* Document.swift in Sources */,
+				4653160B275CA1FE00CCBC2A /* EventNames.swift in Sources */,
+				4653160F275CA25700CCBC2A /* DocumentManager.swift in Sources */,
 				46B0A8162757B9D100D42786 /* DataModel.swift in Sources */,
-				46B0A81A275A004D00D42786 /* ThumbnailCollectionViewController.swift in Sources */,
-				46B0A81E275A018300D42786 /* DrawingViewController.swift in Sources */,
 				46B0A802275379E300D42786 /* AppDelegate.swift in Sources */,
-				46B0A8182759FF9100D42786 /* PencilKitDrawNavigationController.swift in Sources */,
-				46B0A81C275A015100D42786 /* ThumbnailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
