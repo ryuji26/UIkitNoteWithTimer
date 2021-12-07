@@ -121,7 +121,7 @@ final class ThumbnailCollectionViewController: UICollectionViewController, Docum
     private func requestAppStoreReview() {
         guard drawings.count >= 5 else { return } // frequently used
         guard !UserDefaults.standard.bool(forKey: "DidAppStoreReviewRequested") else { return } // request once
-        if #available(iOS 14.0, *) {
+        if #available(iOS 15.0, *) {
             if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 SKStoreReviewController.requestReview(in: scene)
                 UserDefaults.standard.set(true, forKey: "DidAppStoreReviewRequested")

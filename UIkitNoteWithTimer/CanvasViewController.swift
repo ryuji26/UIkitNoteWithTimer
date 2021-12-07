@@ -193,6 +193,11 @@ final class CanvasViewController: UIViewController {
         } else {
             canvasView.allowsFingerDrawing.toggle()
         }
+        if canvasView.drawingPolicy == .anyInput {
+            sender.image = UIImage(systemName: "hand.draw.fill")
+        } else {
+            sender.image = UIImage(systemName: "hand.draw")
+        }
     }
 
     @IBAction func autosaveChangeAction(_ sender: UIBarButtonItem) {
